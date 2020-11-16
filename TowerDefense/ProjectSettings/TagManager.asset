@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - jalan
+  - pasukan
+  - musuh
   layers:
   - Default
   - TransparentFX
@@ -49,4 +52,7 @@ TagManager:
     locked: 0
   - name: Character
     uniqueID: 1855234805
+    locked: 0
+  - name: depan
+    uniqueID: 817113267
     locked: 0
