@@ -8,6 +8,9 @@ TagManager:
   - pasukan
   - musuh
   - TileJalan
+  - GrassTile
+  - TowerTemplate
+  - WaterTile
   layers:
   - Default
   - TransparentFX
@@ -19,9 +22,9 @@ TagManager:
   - 
   - Background
   - Jalan
-  - 
-  - 
-  - 
+  - GrassTile
+  - TowerTemplate
+  - WaterTile
   - 
   - 
   - 
@@ -48,11 +51,11 @@ TagManager:
   - name: Background
     uniqueID: 3694769243
     locked: 0
-  - name: Castle
-    uniqueID: 1948290771
-    locked: 0
   - name: Character
     uniqueID: 1855234805
+    locked: 0
+  - name: Castle
+    uniqueID: 1948290771
     locked: 0
   - name: depan
     uniqueID: 817113267
