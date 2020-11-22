@@ -5,10 +5,12 @@ using UnityEngine;
 public class PeluruTower : MonoBehaviour
 {
     // Start is called before the first frame update
-    float kecepatan = 10f;
+    float kecepatan = 6f;
 
     Vector2 posisi;
     Transform musuh;
+
+    GameObject target;
 
     public void init(Vector2 posisi,Transform musuh)
     {
@@ -24,15 +26,28 @@ public class PeluruTower : MonoBehaviour
     {
         if (collision.CompareTag("musuh"))
         {
-            GameObject target = collision.gameObject;
-            target.GetComponent<BotGerak>().kenaSerang();
-            Destroy(gameObject);
+             target = collision.gameObject;
+            if (target!=null)
+            {
+                target.GetComponent<BotGerak>().kenaSerang();
+            }
+         
+            Destroy(gameObject,0.5f);
         }
     }
 
     private void Update()
-    {  
-        transform.position = Vector2.MoveTowards(transform.position, musuh.position, kecepatan * Time.deltaTime);
+    {
+        if (musuh!=null)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, musuh.position, kecepatan * Time.deltaTime);
+
+        }
+        if(musuh==null)
+        {
+            Destroy(gameObject);
+        }
+     
         //transform.position += (musuh.position - transform.position).normalized;
     }
 }

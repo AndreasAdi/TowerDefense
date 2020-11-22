@@ -21,8 +21,8 @@ public class BotGerak : MonoBehaviour
 
 
     private void Start() {
-         wp = GameObject.FindGameObjectWithTag("jalan").GetComponent<Waypoints>();
-        darah = 3;
+        wp = GameObject.FindGameObjectWithTag("jalan").GetComponent<Waypoints>();
+        darah = 30;
         an = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         sp = GetComponent<SpriteRenderer>();
@@ -46,13 +46,19 @@ public class BotGerak : MonoBehaviour
         {
             //an.SetBool("sedangMati", true);
             GetComponent<Collider2D>().enabled = false;
-            Destroy(gameObject, 2f);
+            an.SetBool("Mati", true);
+            Destroy(gameObject, 1f);
+            speed = 0;
+       
+
+            GameObject.Find("Canvas").GetComponent<CanvasSetting>().tambah_koin();
+           
         }
         //cek apakah localscale sekarang kemudian cari local scale untuk x dan dikalikan -1 supaya gerak nanti mundur karena nanti mau ditambahkan jarak mundurnya (lihat kodingan addforce)
         Vector2 localscale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
         //efek mundur
         //penggunaan addforce selalu mengambil posisi transform saat ini/ kemudian menggunakan perintah up dan right untuk menggerakannya penggunaan localscale dilakukan agar bisa kembali
-        Debug.Log(localscale.x);
+        //Debug.Log(localscale.x);
         rb.AddForce(transform.up * 100 + transform.right * 1000 * localscale.x);
        
       /*  dx = 0;
