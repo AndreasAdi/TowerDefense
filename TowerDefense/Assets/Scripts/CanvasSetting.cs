@@ -6,6 +6,7 @@ using UnityEngine;
 public class CanvasSetting : MonoBehaviour
 {
     public TextMeshProUGUI Koin_txt;
+   
 
     public int koin;
     // Start is called before the first frame update

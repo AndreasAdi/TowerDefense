@@ -11,6 +11,7 @@ TagManager:
   - GrassTile
   - TowerTemplate
   - WaterTile
+  - Panel
   layers:
   - Default
   - TransparentFX
