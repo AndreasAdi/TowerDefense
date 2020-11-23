@@ -22,7 +22,7 @@ public class BotGerak : MonoBehaviour
 
     private void Start() {
         wp = GameObject.FindGameObjectWithTag("jalan").GetComponent<Waypoints>();
-        darah = 30;
+        darah = 10;
         an = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         sp = GetComponent<SpriteRenderer>();
