@@ -9,6 +9,7 @@ public class ConversationPanel : MonoBehaviour
     List<Transform> conversationPanel= new List<Transform>();
     void Start()
     {
+        Time.timeScale = 0;
         Debug.Log("child Count "+transform.childCount);
         //transform.GetChild(0).gameObject.SetActive(false);
         for (int i = transform.childCount-1; i >= 0; i--)
@@ -20,9 +21,9 @@ public class ConversationPanel : MonoBehaviour
     public void nextPage() {
         conversationPanel[indexPage].gameObject.SetActive(false);
         indexPage++;
-        if (indexPage >= transform.childCount) { 
+        if (indexPage >= transform.childCount) {
             //startGame()
-            
+            Time.timeScale = 1;
         }
     }
 }
