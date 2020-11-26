@@ -6,13 +6,17 @@ public class SpawnMusuh : MonoBehaviour
 {
     public GameObject GroupMusuh;
     public GameObject spawnPlace;
-    public GameObject prefabs;
+    public GameObject [] prefabs;
+    public bool boss;
+    public GameObject prefabsBoss;
 
     float waktu = 3;
 
+    
     public void buatMusuh()
     {
-        GameObject obj = Instantiate(prefabs, spawnPlace.transform.position, spawnPlace.transform.rotation);
+        int i = Random.Range(0, prefabs.Length);
+        GameObject obj = Instantiate(prefabs[i], spawnPlace.transform.position, spawnPlace.transform.rotation);
         obj.transform.parent = GroupMusuh.transform;
     }
 

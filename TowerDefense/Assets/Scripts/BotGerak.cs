@@ -17,12 +17,11 @@ public class BotGerak : MonoBehaviour
     float dx;
     float mudur;
 
-    int darah;
+   public int darah;
 
 
     private void Start() {
         wp = GameObject.FindGameObjectWithTag("jalan").GetComponent<Waypoints>();
-        darah = 10;
         an = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         sp = GetComponent<SpriteRenderer>();
@@ -117,4 +116,12 @@ public class BotGerak : MonoBehaviour
         //dx = -tempDx; --> dicek dulu dia ada dimana posisinya
         jalanlagi();
     }
+
+    public void balik()
+    {
+        Vector2 localscale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
+        transform.localScale = localscale;
+  
+    }
+
 }

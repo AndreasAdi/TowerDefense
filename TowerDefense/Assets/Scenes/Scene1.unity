@@ -5333,7 +5333,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GroupMusuh: {fileID: 1556373651}
   spawnPlace: {fileID: 1961577864}
-  prefabs: {fileID: 5022663594465479931, guid: 25af5216304611b4492ac40f8b54d46a, type: 3}
+  prefabs:
+  - {fileID: 5022663594465479931, guid: 25af5216304611b4492ac40f8b54d46a, type: 3}
+  boss: 0
+  prefabsBoss: {fileID: 0}
 --- !u!114 &1730877388
 MonoBehaviour:
   m_ObjectHideFlags: 0
