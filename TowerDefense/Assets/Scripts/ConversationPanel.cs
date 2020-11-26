@@ -8,10 +8,12 @@ public class ConversationPanel : MonoBehaviour
     int indexPage=0;
     List<Transform> conversationPanel= new List<Transform>();
     GameObject camera;
+    public int stage;
     void Start()
     {
         camera = GameObject.Find("Camera");
         camera.GetComponent<SoundEffect>().playSound(0, true, 1);
+     
         Time.timeScale = 0;
         Debug.Log("child Count "+transform.childCount);
         //transform.GetChild(0).gameObject.SetActive(false);
@@ -24,14 +26,17 @@ public class ConversationPanel : MonoBehaviour
     public void nextPage() {
         conversationPanel[indexPage].gameObject.SetActive(false);
         indexPage++;
-        if (indexPage == 1) {
+        if (indexPage == 1 && stage==1) {
             camera.GetComponent<SoundEffect>().playSound(1, true, 1);
         }
-        
+
         if (indexPage >= transform.childCount) {
             //startGame()
             Time.timeScale = 1;
-            camera.GetComponent<SoundEffect>().playSound(2, true, 1);
+            if (stage == 1) {
+                camera.GetComponent<SoundEffect>().playSound(2, true, 1);
+            }
+            camera.GetComponent<SoundEffect>().playSound(1, true, 1);
         }
     }
 }
