@@ -33,10 +33,14 @@ public class ConversationPanel : MonoBehaviour
         if (indexPage >= transform.childCount) {
             //startGame()
             Time.timeScale = 1;
-            if (stage == 1) {
+            if (stage == 1)
+            {
                 camera.GetComponent<SoundEffect>().playSound(2, true, 1);
             }
-            camera.GetComponent<SoundEffect>().playSound(1, true, 1);
+            else {
+                camera.GetComponent<SoundEffect>().playSound(1, true, 1);
+            }
+            
         }
     }
 }
