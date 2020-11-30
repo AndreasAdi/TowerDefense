@@ -8,6 +8,7 @@ public class ConversationPanel : MonoBehaviour
     int indexPage=0;
     List<Transform> conversationPanel= new List<Transform>();
     GameObject camera;
+    public GameObject CanvasConfirm;
     public int stage;
     void Start()
     {
@@ -42,5 +43,10 @@ public class ConversationPanel : MonoBehaviour
             }
             
         }
+    }
+
+    public void exit()
+    {
+        CanvasConfirm.SetActive(true);
     }
 }

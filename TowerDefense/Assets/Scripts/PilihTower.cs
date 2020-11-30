@@ -29,6 +29,8 @@ public class PilihTower : MonoBehaviour
 
     public void Pilih()
     {
+
+        jenisTower = 0;
         if (temp!=null)
         {
             Destroy(temp);
@@ -40,5 +42,20 @@ public class PilihTower : MonoBehaviour
             GameObject.Find("Canvas").GetComponent<CanvasSetting>().koin -= 10;
         } 
         
+    }
+
+    public void Pilih2()
+    {
+        jenisTower = 1;
+        if (temp != null)
+        {
+            Destroy(temp);
+        }
+
+        if (GameObject.Find("Canvas").GetComponent<CanvasSetting>().koin >= 30)
+        {
+            temp = Instantiate(tower[jenisTower], transform.position, Quaternion.identity);
+            GameObject.Find("Canvas").GetComponent<CanvasSetting>().koin -= 30;
+        }
     }
 }

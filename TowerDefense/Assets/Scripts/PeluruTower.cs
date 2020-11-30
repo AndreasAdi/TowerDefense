@@ -12,6 +12,8 @@ public class PeluruTower : MonoBehaviour
 
     GameObject target;
 
+    public int damage =1;
+
     public void init(Vector2 posisi,Transform musuh)
     {
         this.musuh = musuh;
@@ -29,7 +31,7 @@ public class PeluruTower : MonoBehaviour
              target = collision.gameObject;
             if (target!=null)
             {
-                target.GetComponent<BotGerak>().kenaSerang();
+                target.GetComponent<BotGerak>().kenaSerang(damage);
             }
          
             Destroy(gameObject,0.5f);

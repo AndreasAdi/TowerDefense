@@ -35,12 +35,16 @@ public class BotGerak : MonoBehaviour
             if(index<wp.waypoints.Length-1){
                 index++;
             }
+            else if (index==wp.waypoints.Length-1)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 
-    public void kenaSerang()
+    public void kenaSerang(int damage)
     {
-        darah = darah - 1;
+        darah = darah - damage;
         if (darah <= 0)
         {
             //an.SetBool("sedangMati", true);
@@ -53,69 +57,12 @@ public class BotGerak : MonoBehaviour
             GameObject.Find("Canvas").GetComponent<CanvasSetting>().tambah_koin();
            
         }
-        //cek apakah localscale sekarang kemudian cari local scale untuk x dan dikalikan -1 supaya gerak nanti mundur karena nanti mau ditambahkan jarak mundurnya (lihat kodingan addforce)
         Vector2 localscale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
-        //efek mundur
-        //penggunaan addforce selalu mengambil posisi transform saat ini/ kemudian menggunakan perintah up dan right untuk menggerakannya penggunaan localscale dilakukan agar bisa kembali
-        //Debug.Log(localscale.x);
         rb.AddForce(transform.up * 100 + transform.right * 1000 * localscale.x);
-       
-      /*  dx = 0;
-        sp.color = Color.red;
-        step = StartCoroutine(delay2());*/
+
     }
 
 
-
-    IEnumerator delay1()
-    {
-        yield return new WaitForSeconds(3f);
-        dx = tempdx * -1;
-        an.SetBool("sedangJalan", true);
-        sp.color = Color.white;
-    }
-
-    public void diam()
-    {
-        an.SetBool("sedangJalan", false);
-        //tempdx = dx;
-        dx = 0;
-    }
-
-    /* public void jalanlagi()
-     {
-         dx = tempdx;
-         an.SetBool("sedangJalan", true);
-     }*/
-
-    public void jalanlagi()
-    {
-        an.SetBool("sedangJalan", true);
-        //karena default karakter jalan ke kanan (faceRight maka jika 1 adalah +)
-        float cek = transform.localScale.x;
-        if (cek > 0)
-            dx = tempdx;
-        else
-            dx = -tempdx;
-    }
-
-    //lompat
-    public void lompat()
-    {
-        //dicepatkan jalannya
-        dx = dx * 3;
-        float localscale = transform.localScale.x;
-        rb.AddForce(transform.up * 300);
-        step = StartCoroutine(delay2());
-    }
-
-    IEnumerator delay2()
-    {
-        yield return new WaitForSeconds(1.3f);
-        //setelah selesai mau ngapain?
-        //dx = -tempDx; --> dicek dulu dia ada dimana posisinya
-        jalanlagi();
-    }
 
     public void balik()
     {

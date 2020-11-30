@@ -11,7 +11,7 @@ public class SpawnMusuh : MonoBehaviour
     public GameObject prefabsBoss;
 
     float waktu = 3;
-
+    public int jumlahMusuh = 10;
     
     public void buatMusuh()
     {
@@ -22,12 +22,21 @@ public class SpawnMusuh : MonoBehaviour
 
     private void Update()
     {
-        waktu -= Time.deltaTime;
-        if (waktu<0)
+      
+        if (jumlahMusuh>0)
         {
-            buatMusuh();
-            waktu = 3;
+            waktu -= Time.deltaTime;
+            if (waktu < 0)
+            {
+                buatMusuh();
+                jumlahMusuh--;
+                waktu = 3;
+            }
+
+          
         }
+       
+
     }
    /* private void Start()
     {
