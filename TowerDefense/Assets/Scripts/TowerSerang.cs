@@ -13,8 +13,9 @@ public class TowerSerang : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    { 
-        delayTembak = 1f;
+    {
+        gameObject.GetComponent<SoundEffect>().playSound(0, false, 0.4f);
+        delayTembak = 30f;
     }
 
     // Update is called once per frame
@@ -31,7 +32,7 @@ public class TowerSerang : MonoBehaviour
                 float posisi = target.transform.localScale.x;
 
                     buatPeluru(-2);
-            
+                gameObject.GetComponent<SoundEffect>().playSound(1, false, 0.4f);
                 delayTembak = 30f;
             }
         }

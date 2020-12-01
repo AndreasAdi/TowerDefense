@@ -38,6 +38,7 @@ public class BotGerak : MonoBehaviour
             else if (index==wp.waypoints.Length-1)
             {
                 Destroy(gameObject);
+                GameObject.Find("Canvas").GetComponent<CanvasSetting>().kurangi_nyawa();
             }
         }
     }
