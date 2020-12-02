@@ -6491,7 +6491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.25
-  darah: 30
+  darah: 500
 --- !u!95 &1659908017
 Animator:
   serializedVersion: 3
