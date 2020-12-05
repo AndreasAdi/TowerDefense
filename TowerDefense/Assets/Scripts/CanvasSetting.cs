@@ -8,15 +8,17 @@ public class CanvasSetting : MonoBehaviour
     public TextMeshProUGUI Koin_txt;
     public TextMeshProUGUI health_txt;
     public GameObject CanvasGameOver;
+    public GameObject CanvasMenang;
 
     public int koin;
     public int health;
+    public bool gameover;
 
     
     // Start is called before the first frame update
     void Start()
     {
-     
+        gameover = false;
     }
 
     // Update is called once per frame
@@ -32,13 +34,15 @@ public class CanvasSetting : MonoBehaviour
         koin+=10;
     }
 
-    public void kurangi_nyawa()
+    public void kurangi_nyawa(int damage)
     {
-        health -= 1;
+        health -= damage;
         if (health<=0)
         {
+            gameover = true;
             Time.timeScale = 0;
             CanvasGameOver.SetActive(true);
+
         }
     }
 

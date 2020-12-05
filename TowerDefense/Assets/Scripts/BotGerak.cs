@@ -17,8 +17,9 @@ public class BotGerak : MonoBehaviour
     float dx;
     float mudur;
 
-   public int darah;
-
+    public int darah;
+    int damage;
+    public bool boss;
 
     private void Start() {
         wp = GameObject.FindGameObjectWithTag("jalan").GetComponent<Waypoints>();
@@ -27,6 +28,16 @@ public class BotGerak : MonoBehaviour
         sp = GetComponent<SpriteRenderer>();
         dx = 1.5f;
         mudur = 0.3f;
+
+        if (boss)
+        {
+            damage = 10;
+        }
+        else
+        {
+            damage = 1;
+        }
+        
     }
     private void Update() {
         transform.position = Vector2.MoveTowards(transform.position,wp.waypoints[index].position,speed*Time.deltaTime);
@@ -38,7 +49,7 @@ public class BotGerak : MonoBehaviour
             else if (index==wp.waypoints.Length-1)
             {
                 Destroy(gameObject);
-                GameObject.Find("Canvas").GetComponent<CanvasSetting>().kurangi_nyawa();
+                GameObject.Find("Canvas").GetComponent<CanvasSetting>().kurangi_nyawa(damage);
             }
         }
     }
