@@ -16,4 +16,9 @@ public class LevelLoader : MonoBehaviour
        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         canvas.SetActive(false);
     }
+    
+    public void loadmenu()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
