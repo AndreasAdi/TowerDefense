@@ -67,10 +67,10 @@ public class PilihTower : MonoBehaviour
             Destroy(temp);
         }
 
-        if (GameObject.Find("Canvas").GetComponent<CanvasSetting>().koin >= 10)
+        if (GameObject.Find("Canvas").GetComponent<CanvasSetting>().koin >= 50)
         {
             temp = Instantiate(tower[jenisTower], transform.position, Quaternion.identity);
-            GameObject.Find("Canvas").GetComponent<CanvasSetting>().koin -= 10;
+            GameObject.Find("Canvas").GetComponent<CanvasSetting>().koin -= 50;
         }
     }
 }

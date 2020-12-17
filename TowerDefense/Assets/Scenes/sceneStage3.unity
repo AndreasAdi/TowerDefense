@@ -2146,8 +2146,8 @@ RectTransform:
   m_Father: {fileID: 806746}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.63213974}
-  m_AnchorMax: {x: 1, y: 0.9999788}
+  m_AnchorMin: {x: 0, y: 0.6786885}
+  m_AnchorMax: {x: 1, y: 0.9999598}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4491,6 +4491,8 @@ MonoBehaviour:
   soundEff:
   - {fileID: 8300000, guid: 0dc33b1e475f257499fd8e56ee956e1f, type: 3}
   - {fileID: 8300000, guid: e6b517cfccf82984ca51524899ed1994, type: 3}
+  - {fileID: 8300000, guid: c1476b71769335341b1859eb1230c78d, type: 3}
+  - {fileID: 8300000, guid: 9f79adc54aeeb3949ab53093260d1b2f, type: 3}
 --- !u!1 &751253137
 GameObject:
   m_ObjectHideFlags: 0
@@ -4816,6 +4818,7 @@ GameObject:
   - component: {fileID: 855365071}
   - component: {fileID: 855365070}
   - component: {fileID: 855365069}
+  - component: {fileID: 855365073}
   m_Layer: 5
   m_Name: CanvasGameOver
   m_TagString: Untagged
@@ -4903,6 +4906,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &855365073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855365068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87255be8e8c9f2249b0cddf963dbb5b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 3
 --- !u!1 &859635947
 GameObject:
   m_ObjectHideFlags: 0
@@ -6146,7 +6162,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1038999563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7770,8 +7786,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 57.1, y: -697.9995}
-  m_SizeDelta: {x: 1761.6201, y: 2208.4448}
+  m_AnchoredPosition: {x: 57.1, y: -858}
+  m_SizeDelta: {x: 1761.6201, y: 2528.5552}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1201831411
 MonoBehaviour:
@@ -7793,12 +7809,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "This game is made for school project purpose only\r\nwe do not own any
-    musics,illustrations or images showed or used in this project\r\nall the credit
-    for musics,illustrations or images showed or used in this project the resource
-    showed goes to the respectable artist.\r\n\r\nart taken from devianart by Drkav\r\nhttps://www.deviantart.com/drkav/gallery\r\n\r\nKingdom
-    Wallpaper menu screen\r\nhttps://wall.alphacoders.com/big.php?i=130340\r\n\r\nOpening
-    Screen Wallpaper\r\nhttps://wallpapercave.com/w/wp4583588\r\n\r\nScene 3\r\nhttps://1920x1080hdwallpapers.com/\r\n\r\nBoss\r\nhttps://www.pngegg.com/en/png-yhenj/download\r\n\r\nSound
+  m_text: "Disclaimer\n\nThis game is made for school project purpose only\r\nwe
+    do not own any musics,illustrations or images showed or used in this project\r\nall
+    the credit for musics,illustrations or images showed or used in this project
+    the resource showed goes to the respectable artist.\r\n\r\nart taken from devianart
+    by Drkav\r\nhttps://www.deviantart.com/drkav/gallery\r\n\r\nKingdom Wallpaper
+    menu screen\r\nhttps://wall.alphacoders.com/big.php?i=130340\r\n\r\nOpening Screen
+    Wallpaper\r\nhttps://wallpapercave.com/w/wp4583588\r\n\r\nScene 3\r\nhttps://1920x1080hdwallpapers.com/\r\n\r\nBoss\r\nhttps://www.pngegg.com/en/png-yhenj/download\r\n\r\nSound
     Dialog Scene 1\r\nby Adrian von ziegler - woodland tales\r\nhttps://www.youtube.com/watch?v=2kHmb7ZVh6s
     \r\n\r\nSound Main Menu\r\nfrom Skyrim - From Past To Present\r\nhttps://www.youtube.com/watch?v=s5sTI_zBg40\r\n\r\nSound
     Game Play Scene 1\r\nby BrunuhVille\r\nhttps://www.youtube.com/watch?v=g-jGHbkM8e4\r\n\r\nBoss
@@ -7837,7 +7854,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -9211,7 +9228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.25
-  darah: 500
+  darah: 555
   boss: 1
 --- !u!95 &1659908017
 Animator:
@@ -10259,8 +10276,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 240724212}
   m_HandleRect: {fileID: 240724211}
   m_Direction: 2
-  m_Value: 0.9999665
-  m_Size: 0.36783907
+  m_Value: 0.9999409
+  m_Size: 0.32127133
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -10885,6 +10902,7 @@ GameObject:
   - component: {fileID: 2146695244}
   - component: {fileID: 2146695243}
   - component: {fileID: 2146695242}
+  - component: {fileID: 2146695246}
   m_Layer: 5
   m_Name: CanvasMenang
   m_TagString: Untagged
@@ -10972,3 +10990,16 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2146695246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146695241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7b6d2a3423687e42bce82ef52540e81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 3

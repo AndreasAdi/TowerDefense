@@ -13,6 +13,7 @@ public class CanvasSetting : MonoBehaviour
     public int koin;
     public int health;
     public bool gameover;
+    GameObject camera;
 
     
     // Start is called before the first frame update
@@ -42,6 +43,7 @@ public class CanvasSetting : MonoBehaviour
             gameover = true;
             Time.timeScale = 0;
             CanvasGameOver.SetActive(true);
+          
 
         }
     }

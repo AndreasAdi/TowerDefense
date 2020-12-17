@@ -700,6 +700,7 @@ GameObject:
   - component: {fileID: 187737488}
   - component: {fileID: 187737487}
   - component: {fileID: 187737486}
+  - component: {fileID: 187737490}
   m_Layer: 5
   m_Name: CanvasMenang
   m_TagString: Untagged
@@ -787,6 +788,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &187737490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187737485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7b6d2a3423687e42bce82ef52540e81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 2
 --- !u!1 &255336851
 GameObject:
   m_ObjectHideFlags: 0
@@ -4712,6 +4726,7 @@ GameObject:
   - component: {fileID: 1078107621}
   - component: {fileID: 1078107620}
   - component: {fileID: 1078107619}
+  - component: {fileID: 1078107623}
   m_Layer: 5
   m_Name: CanvasGameOver
   m_TagString: Untagged
@@ -4799,6 +4814,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1078107623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078107618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87255be8e8c9f2249b0cddf963dbb5b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 2
 --- !u!1 &1127379615
 GameObject:
   m_ObjectHideFlags: 0
@@ -4898,6 +4926,8 @@ MonoBehaviour:
   soundEff:
   - {fileID: 8300000, guid: 2a8ca8b79aa8bbe479744c69053e626d, type: 3}
   - {fileID: 8300000, guid: b7631923d37c7eb4a89432a45095e862, type: 3}
+  - {fileID: 8300000, guid: c1476b71769335341b1859eb1230c78d, type: 3}
+  - {fileID: 8300000, guid: 9f79adc54aeeb3949ab53093260d1b2f, type: 3}
 --- !u!1 &1152379026
 GameObject:
   m_ObjectHideFlags: 0
